@@ -18,6 +18,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         
     }else if(isNaN(user.age) || isNaN(user.guess)){
         alert("age et devinez un nombre doivent être des chiffres");
+    }else if(!isNaN(user.nom) || !isNaN(user.prenom)){
+        alert("nom et prenom doivent être des lettres");
     }else if(user.email.split('@').length !== 2 || user.email.split('.').length !== 2){
         alert("email invalide");
     }else if(user.age < 16 || user.age > 50){
