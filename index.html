@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <form id="registrationForm">
+        <h1>Formulaire Magib</h1>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" placeholder="votre nom" >
+        <br>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" placeholder="votre prenom" >
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Email" >
+        <br>
+
+        <label for="age">Âge:</label>
+        <input type="text"  id="age" name="age" placeholder="votre age" >
+        <br>
+
+        <label for="pays">Pays:</label>
+        <select id="pays" name="pays" >
+            <option value="Belgique">Belgique</option>
+            <option value="Suisse">Suisse</option>
+            <option value="France">France</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <br>
+
+        <label for="guess"> deviner un nombre entre 0 et 10:</label>
+        <input type="text" id="guess" name="guess" placeholder="un chifre entre 1 et 10" >
+        <br>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <script src="js.js"></script>
+</body>
+</html>
