@@ -1,6 +1,6 @@
 
 
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
     event.preventDefault(); //ajoute un écouteur d'événement sur le formulaire pour intercepter la soumission et empêcher son comportement par défaut. Décomposons-le en détail
 
     const user = {
@@ -12,33 +12,41 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         guess: parseInt(document.getElementById('guess').value, 10)
     };//parseInt(..., 10) assure que la valeur est bien un nombre et non une chaîne de caractères.
 
-    
-    if (user.nom === '' || user.prenom === '' || user.email === '' || user.age ==='' || user.pays === '' || user.guess === '') {
+
+    if (user.nom === '' || user.prenom === '' || user.email === '' || user.age === '' || user.pays === '' || user.guess === '') {
         alert("il faut tout remplir");
-        
-    }else if(isNaN(user.age) || isNaN(user.guess)){
+
+    } else if (isNaN(user.age) || isNaN(user.guess)) {
         alert("age et devinez un nombre doivent être des chiffres");
-    }else if(!isNaN(user.nom) || !isNaN(user.prenom)){
+    } else if (!isNaN(user.nom) || !isNaN(user.prenom)) {
+
         alert("nom et prenom doivent être des lettres");
-    }else if(user.email.split('@').length !== 2 || user.email.split('.').length !== 2){
+    } else if (user.email.split('@').length !== 2 || user.email.split('.').length !== 2) {
         alert("email invalide");
-    }else if(user.age < 16 || user.age > 50){
+    } else if (user.age < 16 || user.age > 50) {
         alert("age doit etre entre 16 et 50 ans");
 
-    }else if(user.guess <8){
+    } else if (user.guess < 8) {
         alert("votre chifre est trop petit");
-    }else if(user.guess > 8){
+    } else if (user.guess > 8) {
         alert("votre chifre est trop grand");
-    }
+        //     } else if (nom != "") {
+        //         for (let x of user.nom) {
+        //             if (!isNaN(x)) {
+        //                 alert("not numbers pls")
 
 
-    else{
+        //             }
+        //         }
+    } else {
         window.location.href = "https://2025.webdev-cf2m.be/omer/prefo/";
     }
+
+
+
 });
 
 
- 
 
 
-   
+
