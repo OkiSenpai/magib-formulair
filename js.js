@@ -21,7 +21,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     } else if (!isNaN(user.nom) || !isNaN(user.prenom)) {
 
         alert("nom et prenom doivent être des lettres");
-    } else if (user.email.split('@').length !== 2 || user.email.split('.').length !== 2) {
+    } else if (user.email.split('@').length !== 2 || user.email.split('.').length !== 2) {  // j'ai truvé sur internet
         alert("email invalide");
     } else if (user.age < 16 || user.age > 50) {
         alert("age doit etre entre 16 et 50 ans");
@@ -30,12 +30,15 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         alert("votre chifre est trop petit");
     } else if (user.guess > 8) {
         alert("votre chifre est trop grand");
+
+        // je ne sais pas trouver une bonne condition pour que ca marche! dans ce cas il est toujours dans la condition et il ne sors alors pas de la boucle!
+        // je ne sais pas trouver une bonne condition pour que ca marche! dans ce cas il est toujours dans la condition et il ne sors alors pas de la boucle!
+        // je ne sais pas trouver une bonne condition pour que ca marche! dans ce cas il est toujours dans la condition et il ne sors alors pas de la boucle!
+
         //     } else if (nom != "") {
         //         for (let x of user.nom) {
         //             if (!isNaN(x)) {
         //                 alert("not numbers pls")
-
-
         //             }
         //         }
     } else {
